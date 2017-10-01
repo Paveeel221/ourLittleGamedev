@@ -3,14 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class hodiBratan : MonoBehaviour {
+    float horizontalSpeed;
+    float speedX;
+    float verticalImpulse;
+    Rigidbody2D rb;
 
-	// Use this for initialization
 	void Start () {
-		
+        rb = GetComponent<Rigidbody2D>();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	void FixedUpdate () {
+        if (Input.GetKey(KeyCode.A)){
+            speedX = -horizontalSpeed;
+        }else if (Input.GetKey(KeyCode.D)){
+            speedX = horizontalSpeed;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space)){
+
+        }
 	}
 }
